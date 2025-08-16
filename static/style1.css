@@ -44,6 +44,11 @@ input[type="submit"] {
     margin: 20px auto;
     display:block        /* center the button */
 }
+.required-label::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
 
 
 input[type="button"]:hover {
