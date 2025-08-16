@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Water Quality Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+
+<body>
+    <div class="form-box">
+        <h2>Enter Water Quality Parameters</h2>
+        <form action="/predict_water" method="POST">
+            <div class="form-grid">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="required-label">pH:</label>
+                        <input type="number" step="any" name="pH" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-label">TH:</label>
+                        <input type="number" step="any" name="TH" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="required-label">TDS:</label>
+                        <input type="number" step="any" name="TDS">
+                    </div>
+                    <div class="form-group">
+                        <label>CO3:</label>
+                        <input type="number" step="any" name="CO3">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>HCO3:</label>
+                        <input type="number" step="any" name="HCO3">
+                    </div>
+                    <div class="form-group">
+                        <label>Cl:</label>
+                        <input type="number" step="any" name="Cl">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>SO4:</label>
+                        <input type="number" step="any" name="SO4">
+                    </div>
+                    <div class="form-group">
+                        <label>NO3:</label>
+                        <input type="number" step="any" name="NO3">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Ca:</label>
+                        <input type="number" step="any" name="Ca">
+                    </div>
+                    <div class="form-group">
+                        <label>Mg:</label>
+                        <input type="number" step="any" name="Mg">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Na:</label>
+                        <input type="number" step="any" name="Na">
+                    </div>
+                    <div class="form-group">
+                        <label>K:</label>
+                        <input type="number" step="any" name="K">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>F:</label>
+                        <input type="number" step="any" name="F">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">Predict Water Quality</button>
+        </form>
+    </div>
+</body>
+
+</html>

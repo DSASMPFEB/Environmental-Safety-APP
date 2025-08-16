@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EnviroCheck – “Breathe Safe. Drink Pure.”</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Top Centered Main Heading -->
+    <div class="title-container">
+        <h1 class="main-heading">🌎An AI-Powered Web App for Air and Water Quality Prediction in India</h1>
+    </div>
+
+    <!-- App Name and Tagline -->
+    <div class="title-container">
+        <h2 class="app-name">EnviroCheck</h2>
+        <div class="tagline">“Breathe Safe. Drink Pure.”</div>
+    </div>
+
+    <!-- Navigation Tiles -->
+    <div class="button-grid">
+        <div class="tile">
+            <img src="https://img.icons8.com/color/96/000000/wind.png" alt="Air Quality Icon" />
+            <a href="/air_form">Check Air Quality</a>
+        </div>
+        <div class="tile">
+            <img src="https://img.icons8.com/color/96/000000/water.png" alt="Water Quality Icon" />
+            <a href="/water_form">Check Water Quality</a>
+        </div>
+    </div>
+
+    <div class = "dashboard-link">
+    <div>
+        <a href="{{ url_for('intro_report') }}" style=color: #007bff; font-weight: bold;">
+            📈 Access Preliminary Analysis Report
+
+        </a>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

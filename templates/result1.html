@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Air Quality Prediction Result</title>
+    <style>
+        body {
+            background-image: url('/static/image1/air.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            font-family: "Segoe UI", sans-serif;
+            padding: 40px;
+
+        }
+
+
+        h1 {
+            color: #080101;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .aqi-value {
+            font-size: 100px;
+            font-weight: 900;
+            color: #a85656;
+            /* White for high contrast */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            /* Makes it pop over any background */
+            margin-top: 20px;
+        }
+
+        .health-class {
+            color: #05090be4;
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-shadow: 1px 1px 3px rgba(24, 21, 21, 0.5);
+        }
+
+
+        .healthy {
+            color: #041e12;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(152, 75, 75, 0.5);
+        }
+
+        .unhealthy {
+            color: #ec3427;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .advice {
+            margin-top: 80px;
+            font-size: 18px;
+            background-color: #222629;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            margin-top: 130px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #1976d2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Prediction Result</h1>
+    <div class="aqi {{ 'unhealthy' if health_class == 'Unhealthy' else 'healthy' }}">
+        AQI: {{ aqi }}
+    </div>
+    <div class="health-class">
+        <strong>Health Class:</strong>
+        <span class="{{ 'unhealthy' if health_class == 'Unhealthy' else 'healthy' }}">
+            {{ health_class }}
+        </span>
+    </div>
+
+    <div class="advice">
+        {% if health_class == "Unhealthy" %}
+        ⚠️ Air quality may be hazardous. Limit outdoor activities and consider using a mask.
+        {% elif health_class == "Healthy" %}
+        ✅ Air quality is acceptable. You can enjoy outdoor activities as usual.
+        {% else %}
+        ℹ️ Health impact uncertain—use caution and check pollutant details.
+        {% endif %}
+    </div>
+
+    <div class="back-button">
+        <a href="/">🔄 Try Another Prediction</a>
+    </div>
+
+</body>
+
+</html>

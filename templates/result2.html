@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Water Quality Result</title>
+    <style>
+        body {
+            background-image: url('/static/image2/water.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #eaf7fb;
+            padding: 40px;
+            text-align: right;
+        }
+
+
+
+        h1 {
+            font-size: 45px;
+            text-align: center;
+            color: #073147;
+            margin-bottom: 150px;
+        }
+
+        .predicted_wqi {
+            font-size: 35px;
+            color: #14498e;
+            font-weight: bold;
+            text-align: right;
+            padding-right: 170px;
+        }
+
+        .potability-status {
+            font-size: 28px;
+            margin-top: 20px;
+            color: #d00000;
+            text-align: right;
+            padding-right: 100px;
+        }
+
+        .safe {
+            color: #2a9d8f;
+        }
+
+        .advice {
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            color: rgb(19, 12, 12);
+            padding-left: 900px;
+        }
+
+        .button {
+            margin-top: 30px;
+            text-align: right;
+            padding-right: 150px;
+        }
+
+        .button a {
+            text-decoration: none;
+            background-color: #0077b6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Water Quality Prediction</h1>
+    
+    <div class="predicted_wqi">WQI: {{ wqi }}</div>
+
+    {% if potability == "Potable" %}
+    <div class="potability-status safe">Status: {{ potability }} ✅</div>
+    {% else %}
+    <div class="potability-status">Status: {{ potability }} ❌</div>
+    {% endif %}
+    <div class="advice">
+        {% if potability == "Potable" %}
+        <br>✅ Water quality is safe for consumption.<br>
+        No treatment required—suitable for drinking and domestic use.
+    
+        {% elif potability == "Non-potable" %}
+        ❌ Water is unsafe for drinking.<br>
+        Avoid consumption without proper treatment—may contain harmful contaminants.
+    
+        {% else %}
+        ⚠️ Water may be conditionally safe.<br>
+        Recommend testing for specific parameters (e.g., nitrates, TDS, pathogens)
+        before use.
+        {% endif %}
+    
+    </div>
+
+
+    <div class="button">
+        <a href="/water_form">Try Another Prediction</a>
+    </div>
+    <br>
+    <div class="button">
+        <a href="/">Go to Air Quality Form</a>
+    </div>
+
+</body>
+
+</html>
