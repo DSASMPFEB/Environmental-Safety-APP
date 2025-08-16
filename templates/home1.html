@@ -11,19 +11,19 @@
     <div class="form-container">
         <h2>Enter Pollutant Levels</h2>
         <form action="/predict" method="POST">
-            <label for="pm25">PM2.5 (µg/m³):</label>
+            <label for="pm25" class="required-label">PM2.5 (µg/m³):</label>
             <input type="number" name="pm25" min="0" required>
 
-            <label for="pm10">PM10 (µg/m³):</label>
+            <label for="pm10" class="required-label">PM10 (µg/m³):</label>
             <input type="number" name="pm10" min="0" required>
 
-            <label for="o3">O₃ (ppb):</label>
+            <label for="o3" class="required-label">O₃ (ppb):</label>
             <input type="number" name="o3" min="0" required>
 
-            <label for="so2">SO₂ (ppb):</label>
+            <label for="so2" class="required-label">SO₂ (ppb):</label>
             <input type="number" name="so2" min="0" required>
 
-            <label for="no2">NO₂ (ppb):</label>
+            <label for="no2" class="required-label">NO₂ (ppb):</label>
             <input type="number" name="no2" min="0" required>
 
             <input type="submit" value="Predict AQI & Health Class">
