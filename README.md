@@ -51,25 +51,36 @@ Validates inputs & applies classification logic
 
 #### Environmental-Safety-APP/
 
-├── app.py                     
+├── app.py  
+
 ├── requirements.txt           
 
 ├── static/
 
-│   ├── image/                 
-│   ├── image1/                
-│   ├── image2/                
-│   ├── style.css              
-│   ├── style1.css             
+│   ├── image/  
+
+│   ├── image1/ 
+
+│   ├── image2/ 
+
+│   ├── style.css
+
+│   ├── style1.css 
+
 │   └── style2.css             
 
 ├── templates/
 
-│   ├── main.html              
-│   ├── home1.html             
-│   ├── result1.html          
-│   ├── home2.html             
-│   ├── result2.html           
+│   ├── main.html
+
+│   ├── home1.html  
+
+│   ├── result1.html
+
+│   ├── home2.html 
+
+│   ├── result2.html 
+
 │   └── report.html            
 
 ├── models/
@@ -88,8 +99,10 @@ Validates inputs & applies classification logic
 
 ├── deployment/
 
-│   └── pythonanywhere_config.md  
-├── README.md                
+│   └── pythonanywhere_config.md 
+
+├── README.md 
+
 └── .gitignore              
 
 ### 🚀 Installation & Setup
