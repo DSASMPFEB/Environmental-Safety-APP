@@ -24,23 +24,32 @@ Best Performer: Random Forest & MLP Regressor (High R², Low MSE)
 #### Frontend
 
 main.html → Dashboard & navigation
+
 home1.html → Air Quality input form
+
 result1.html → Air Quality results
+
 home2.html → Water Quality input form
+
 result2.html → Water Quality results
+
 report.html → Project overview + Tableau link
 
 #### Backend
 
 app.py → Core Flask app
+
 Loads ML models
+
 Handles routing
+
 Processes predictions
+
 Validates inputs & applies classification logic
 
 ### 📁 Project Structure
-#### Environmental Safety APP/
-Environmental-Safety-APP/
+
+#### Environmental-Safety-APP/
 
 ├── app.py                     
 ├── requirements.txt           
@@ -55,6 +64,7 @@ Environmental-Safety-APP/
 │   └── style2.css             
 
 ├── templates/
+
 │   ├── main.html              
 │   ├── home1.html             
 │   ├── result1.html          
@@ -63,6 +73,7 @@ Environmental-Safety-APP/
 │   └── report.html            
 
 ├── models/
+
 │   ├── air_quality_classification/  
 │   ├── air_quality_regression/
 │   ├── water_quality/
@@ -71,6 +82,7 @@ Environmental-Safety-APP/
 │   └── water_model.pkl        
 
 ├── deployment/
+
 │   └── pythonanywhere_config.md  
 ├── README.md                
 └── .gitignore              
