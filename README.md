@@ -74,9 +74,9 @@ Validates inputs & applies classification logic
 
 ├── models/
 
-│   ├── air_quality_classification/  
-│   ├── air_quality_regression/
-│   ├── water_quality/
+│   ├── air_quality_classification  
+│   ├── air_quality_regression
+│   ├── water_quality
 │   ├── air_reg.pkl            
 │   ├── air_cls.pkl            
 │   └── water_model.pkl        
@@ -90,11 +90,14 @@ Validates inputs & applies classification logic
 ### 🚀 Installation & Setup
 #### Clone the repository
 git clone https://github.com/DSASMPFEB/Environmental-Safety-APP.git
+
 cd Environmental Safety APP
 
 #### Create virtual environment
 python -m venv venv
+
 source venv/bin/activate   # On Linux/Mac
+
 venv\Scripts\activate      # On Windows
 
 #### Install dependencies
