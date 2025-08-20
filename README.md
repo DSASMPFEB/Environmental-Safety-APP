@@ -20,13 +20,33 @@ Best Performer: Random Forest Regressor (MSE ↓, R² ↑)
 Regression → Linear, Polynomial, Lasso, Ridge, Random Forest, LightGBM, MLP
 Best Performer: Random Forest & MLP Regressor (High R², Low MSE)
 
+### 🧩 Project Architecture
+#### Frontend
+
+main.html → Dashboard & navigation
+home1.html → Air Quality input form
+result1.html → Air Quality results
+home2.html → Water Quality input form
+result2.html → Water Quality results
+report.html → Project overview + Tableau link
+
+#### Backend
+
+app.py → Core Flask app
+Loads ML models
+Handles routing
+Processes predictions
+Validates inputs & applies classification logic
+
 ### 📁 Project Structure
 #### Environmental Safety APP/
 Environmental-Safety-APP/
+
 ├── app.py                     
 ├── requirements.txt           
 
 ├── static/
+
 │   ├── image/                 
 │   ├── image1/                
 │   ├── image2/                
