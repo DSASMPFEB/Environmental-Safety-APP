@@ -22,33 +22,39 @@ Best Performer: Random Forest & MLP Regressor (High R², Low MSE)
 
 ### 📁 Project Structure
 #### Environmental Safety APP/
-├── app.py                      # Main Flask app: routing, model loading, prediction logic
-├── requirements.txt            # Python dependencies
+Environmental-Safety-APP/
+├── app.py                     # Main Flask app: routing, model loading, prediction logic
+├── requirements.txt           # Python dependencies
+
 ├── static/
-│       ├── image               # images for background 
-│       ├── image1
-│       ├── image2  
-│       ├── style.css           # Styling for main dashboard
-│       ├── style1.css          # Styling for air quality pages
-│       └── style1.css          # Styling for water quality pages
+│   ├── image/                 # Images for background
+│   ├── image1/                # Additional visuals
+│   ├── image2/                # Supplementary graphics
+│   ├── style.css              # Styling for main dashboard
+│   ├── style1.css             # Styling for air quality pages
+│   └── style2.css             # Styling for water quality pages
+
 ├── templates/
-│   ├── main.html               # Central dashboard with navigation options
-│   ├── home1.html              # Air quality input form
-│   ├── result1.html            # Air quality prediction output
-│   ├── home2.html              # Water quality input form
-│   ├── result2.html            # Water quality prediction output
-│   └── report.html             # Intro page with Tableau dashboard link
+│   ├── main.html              # Central dashboard with navigation options
+│   ├── home1.html             # Air quality input form
+│   ├── result1.html           # Air quality prediction output
+│   ├── home2.html             # Water quality input form
+│   ├── result2.html           # Water quality prediction output
+│   └── report.html            # Intro page with Tableau dashboard link
+
 ├── models/
-│   ├── air_quality_classification # Preprocessing notebooks
-│   ├── air_quality_regression
-│   ├── water_quality
-│   ├── air_reg.pkl             # Trained regression model for AQI
-│   ├── air_cls.pkl             # Trained model for health classification
-│   └── water_model.pkl         # Trained regression model for WQI
+│   ├── air_quality_classification/  # Preprocessing notebooks
+│   ├── air_quality_regression/
+│   ├── water_quality/
+│   ├── air_reg.pkl            # Trained regression model for AQI
+│   ├── air_cls.pkl            # Trained model for health classification
+│   └── water_model.pkl        # Trained regression model for WQI
+
 ├── deployment/
-│   ├── pythonanywhere_config.md # Notes for deploying on PythonAnywhere
-├── README.md                   # Project overview and instructions
-└── .gitignore                  # Excludes model files, logs, and temp data
+│   └── pythonanywhere_config.md  # Notes for deploying on PythonAnywhere
+
+├── README.md                 # Project overview and instructions
+└── .gitignore               # Excludes model files, logs, and temp data
 
 ### 🚀 Installation & Setup
 #### Clone the repository
