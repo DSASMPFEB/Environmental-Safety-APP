@@ -75,10 +75,15 @@ Validates inputs & applies classification logic
 ├── models/
 
 │   ├── air_quality_classification  
+
 │   ├── air_quality_regression
+
 │   ├── water_quality
-│   ├── air_reg.pkl            
-│   ├── air_cls.pkl            
+
+│   ├── air_reg.pkl
+
+│   ├── air_cls.pkl
+
 │   └── water_model.pkl        
 
 ├── deployment/
