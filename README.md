@@ -20,8 +20,8 @@ Best Performer: Random Forest Regressor (MSE ↓, R² ↑)
 Regression → Linear, Polynomial, Lasso, Ridge, Random Forest, LightGBM, MLP
 Best Performer: Random Forest & MLP Regressor (High R², Low MSE)
 
-###📁 Project Structure
-Environmental Safety APP/
+### 📁 Project Structure
+#### Environmental Safety APP/
 ├── app.py                      # Main Flask app: routing, model loading, prediction logic
 ├── requirements.txt            # Python dependencies
 ├── static/
